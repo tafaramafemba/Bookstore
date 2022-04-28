@@ -1,6 +1,6 @@
 import React from "react";
 import BookForm from "./BookForm";
-import DisplayBook from "./DisplayBook";
+import DisplayBook from "./Book";
 
 class Books extends React.Component {
 
