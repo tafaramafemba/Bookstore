@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.ul {
+  display: inline-flex;
+  flex-direction: row;
+  gap: 10px;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+}
