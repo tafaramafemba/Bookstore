@@ -6,9 +6,11 @@ export const lookAtStatus = () => {
   }
 }
 
-export default statusReducer = (state = [], action) => {
+const statusReducer = (state = [], action) => {
   switch (action.type) {
-    case CHECK_STATUS: { return 'Under construction ' };
-    default: state;
+    case CHECK_STATUS: { return 'Under construction' };
+    default: return state;
   }
 }
+
+export default statusReducer;
