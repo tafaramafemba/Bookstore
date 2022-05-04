@@ -6,8 +6,8 @@ import booksReducer from '../redux/books/books';
 import categoriesReducer from '../redux/categories/categories';
 
 const rootReducer = combineReducers({
-  booksReducer,
-  categoriesReducer
+  books: booksReducer,
+  categories: categoriesReducer
 });
 
 const initialState = {};

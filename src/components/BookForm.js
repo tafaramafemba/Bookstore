@@ -10,7 +10,7 @@ function BookForm() {
     const { target } = e;
     const title = target.title.value;
     const author = target.author.value;
-    dispatch(moreBooks({ title, author }));
+    dispatch(moreBooks({ title, author, category: '' }));
   };
 
   return (
