@@ -11,6 +11,8 @@ function BookForm() {
     const title = target.title.value;
     const author = target.author.value;
     dispatch(moreBooks({ title, author, category: '' }));
+    target.title.value = '';
+    target.author.value = '';
   };
 
   return (

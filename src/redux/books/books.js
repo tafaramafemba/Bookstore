@@ -6,12 +6,12 @@ const REMOVE_BOOK = 'BOOK_REMOVED';
 
 const initialState = [];
 
-export default function (state = initialState, action = {}) {
+export default function (state = initialState, action) {
   switch (action.type) {
-    case GET_BOOK: return [...state, action.payload]
+    case GET_BOOK: return  action.payload
     case ADD_BOOK: return [...state, action.payload]
 
-    case REMOVE_BOOK: return state.filter((book) => book.id !== action.id);
+    case REMOVE_BOOK: return state.filter((book) => book.item_id !== action.id);
     default: return state
   }
 
