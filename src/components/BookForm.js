@@ -1,38 +1,29 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { moreBooks } from "../redux/books/books";
 
-class BookForm extends React.Component {
-  constructor(props) {
-    super(props);
+function BookForm() {
+  const dispatch = useDispatch();
 
-    this.state = {
-      title: '',
-      author: '',
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const { target } = e;
+    const title = target.title.value;
+    const author = target.author.value;
+    dispatch(moreBooks({ title, author }));
+  };
+
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <h2>Add a Book</h2>
+        <input type="text" id="title" placeholder="Add Title" required />
+        <input type="text" id="author" placeholder="Add Author" required />
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+  )
   }
-
-
-  render() {
-
-    return (
-      <div>
-        <form className="form-container">
-          <input
-            className="b-title"
-            type="text"
-            placeholder="Book title"
-          />
-          <input
-            className="b-author"
-            type="text"
-            placeholder="Author"
-          />
-          <button className="b-submit" type="button">ADD BOOK</button>
-        </form>
-      </div>
-
-    );
-  }
-}
 
 
 export default BookForm;

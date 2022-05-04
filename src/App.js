@@ -1,11 +1,9 @@
-import react from 'react';
 import Nav from './components/Nav';
 import Books from './components/Books';
 import Categories from './components/Categories';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-class App extends react.Component {
-  render() {
+function App() {
     return (
       <BrowserRouter>
         <div className="App">
@@ -19,5 +17,5 @@ class App extends react.Component {
 
     );
   }
-}
+
 export default App;

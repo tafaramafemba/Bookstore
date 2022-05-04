@@ -1,25 +1,23 @@
-import React from "react";
-import PropTypes from 'prop-types';
+import React from 'react';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { lessBooks } from '../redux/books/books';
 
-class DisplayBook extends React.Component {
-  render(){
-    const { books } = this.props;
-    return(
-      <div>
+function DisplayBook() {
+  const state = useSelector(state => state.booksReducer);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
       <ul>
-      {books.map(book => (
+      {state.map(book => (
         <li key={book.id}>{book.title}{book.author}
-        <button>Remove</button>
+        <button onClick={() => dispatch(lessBooks(book.id))} type="button">Remove</button>
         </li>
       ))}
     </ul>
     </div>
-    )
-  }
+  )
 }
-
-DisplayBook.propTypes = {
-  books: PropTypes.instanceOf(Array).isRequired,
-};
 
 export default DisplayBook;
