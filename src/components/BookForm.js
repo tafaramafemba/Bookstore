@@ -1,3 +1,4 @@
+import '../BookForm.css';
 import React from "react";
 import { useDispatch } from "react-redux";
 import { moreBooks } from "../redux/books/books";
@@ -18,10 +19,11 @@ function BookForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h2>Add a Book</h2>
+        <hr className='hr'></hr>
+        <h2 className='addBook'>ADD NEW BOOK</h2>
         <input type="text" id="title" placeholder="Add Title" required />
         <input type="text" id="author" placeholder="Add Author" required />
-        <button type="submit">Add Book</button>
+        <button type="submit" className='submit'>ADD BOOK</button>
       </form>
     </div>
   )
