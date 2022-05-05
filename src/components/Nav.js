@@ -8,12 +8,13 @@ function Nav() {
           <h3 className='h3'>Bookstore CMS</h3>
           <ul className='ul'>
             <Link to="/">
-            <li>Books</li>
+            <li className='bookslink'>Books</li>
             </Link>
             <Link to="/Categories">
             <li className='link'>Categories</li>
             </Link>        
           </ul>
+          <button className='user'></button>
         </nav>
       </div>
     );
